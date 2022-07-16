@@ -5,12 +5,25 @@ function minPermutation(n) {
     if(n < 0){
         let arr = String(n).split('');
         let newArr = arr.sort((a, b) => a - b);
+        let numnull = 0;
+        for(let i = 0; i<arr.length; i++){
+            if(arr[i] == 0){
+                numnull += 1;
+            }
+        }
+        console.log(numnull);
         if(newArr[1] == 0){
             [newArr[1], newArr[2]] = [newArr[2], newArr[1]];
         }
         newArr.shift();
+        if(numnull > 1){
+            let j = 0;
+            while (j< numnull){
+                newArr.splice(1, 0, 0);
+                j++;
+            }
+        };
         let num = newArr.join('');
-        console.log(-(+num));
         return -(+num);
     }else{
         let arr = String(n).split('');
@@ -22,4 +35,3 @@ function minPermutation(n) {
         return +num
     }
 }
-
