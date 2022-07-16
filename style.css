@@ -1,4 +1,7 @@
-.body{
-backgraund-color: black;
+body{
+    background: black;
+}
+h1{
+    color: green;
 }
 
