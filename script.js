@@ -54,3 +54,13 @@ function minPermutation(n) {
 function findMultiples(integer, limit) {
     return Array.from({length: parseInt(limit / integer)}, (_,index) => (index + 1) * integer)
 }
+
+function playerRankUp (points) {
+    return points >= 100 ?
+        "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up." :
+        false;
+
+
+
+    const findMultiples=(integer, limit)=>
+        Array.from({length: parseInt(limit/integer)},(_,index)=>(index + 1)*integer )
