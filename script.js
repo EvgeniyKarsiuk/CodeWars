@@ -83,3 +83,20 @@ function playerRankUp (points) {
     }
 
     console.log(ownProps);
+
+    function mutation(arr) {
+        let one = arr[1].toLowerCase().split('');
+        let two = arr[0].toLowerCase().split('');
+        console.log(one,two)
+        for(let i = 0; i < one.length; i++){
+            if (two.indexOf(one[i]) < 0)
+                return false;
+        }
+        return true;
+    }
+
+    mutation(["hello", "hey"]);
+    mutation(["hello", "Hello"]);
+    mutation(["Mary", "Army"]);
+    mutation(["Mary", "Aarmy"]);
+    mutation(["Noel", "Ole"]); 
