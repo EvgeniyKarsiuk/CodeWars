@@ -38,83 +38,11 @@ function minPermutation(n) {
 
 
 
-//////
- Sum without highest and lowest number
- JavaScript:
-     function sumArray(array)  {
-   if(array && array.length > 1) {
-        const sortedArray = array.sort((a,b) => a - b).slice(1, -1)
-         return sortedArray.reduce((acc, cur) => acc + cur, 0)
-   }
-
-    return 0
- }
-
-
-function findMultiples(integer, limit) {
-    return Array.from({length: parseInt(limit / integer)}, (_,index) => (index + 1) * integer)
-}
-
-function playerRankUp (points) {
-    return points >= 100 ?
-        "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up." :
-        false;
-
-
-
-    const findMultiples=(integer, limit)=>
-        Array.from({length: parseInt(limit/integer)},(_,index)=>(index + 1)*integer )
-
-
-    function Bird(name) {
-        this.name = name;
-        this.numLegs = 2;
+    /*function bonusTime(salary, bonus) {
+    if(bonus==true){
+      return "£"+salary*10
+    }else{
+      return "£"+salary
     }
-
-    let duck = new Bird("Donald");
-    let canary = new Bird("Tweety");
-    
-        let ownProps = [];
-
-    for (let property in duck) {
-        if(duck.hasOwnProperty(property)) {
-            ownProps.push(property);
-        }
-    }
-
-    console.log(ownProps);
-
-    function mutation(arr) {
-        let one = arr[1].toLowerCase().split('');
-        let two = arr[0].toLowerCase().split('');
-        console.log(one,two)
-        for(let i = 0; i < one.length; i++){
-            if (two.indexOf(one[i]) < 0)
-                return false;
-        }
-        return true;
-    }
-
-    mutation(["hello", "hey"]);
-    mutation(["hello", "Hello"]);
-    mutation(["Mary", "Army"]);
-    mutation(["Mary", "Aarmy"]);
-    mutation(["Noel", "Ole"]);
-
-          class Book {
-  constructor(author) {
-    this._author = author;
-  }
-  // getter
-  get writer() {
-    return this._author;
-  }
-  // setter
-  set writer(updatedAuthor) {
-    this._author = updatedAuthor;
-  }
-}
-const novel = new Book('anonymous');
-console.log(novel.writer);
-novel.writer = 'newAuthor';
-console.log(novel.writer);
+    }*/
+    const bonusTime = (salary, bonus) => bonus==true? "£"+salary*10 :"£"+salary;
