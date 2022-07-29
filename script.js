@@ -38,11 +38,11 @@ function minPermutation(n) {
 
 
 
-    /*function bonusTime(salary, bonus) {
+    function bonusTime(salary, bonus) {
     if(bonus==true){
       return "£"+salary*10
     }else{
       return "£"+salary
     }
-    }*/
+    }
     const bonusTime = (salary, bonus) => bonus==true? "£"+salary*10 :"£"+salary;

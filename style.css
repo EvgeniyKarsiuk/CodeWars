@@ -10,4 +10,5 @@ h1:hover{
 }
 h2{
     color: pink;
+    text-decoration-line: top;
 }
