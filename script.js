@@ -1,39 +1,41 @@
 alert('Goog j0b');
 
-
 function minPermutation(n) {
     if(n < 0){
         let arr = String(n).split('');
+        arr.shift();
         let newArr = arr.sort((a, b) => a - b);
         let numnull = 0;
+        let c = [];
         for(let i = 0; i<arr.length; i++){
             if(arr[i] == 0){
                 numnull += 1;
+                c.push('0')
             }
         }
-        console.log(numnull);
-        if(newArr[1] == 0){
-            [newArr[1], newArr[2]] = [newArr[2], newArr[1]];
-        }
-        newArr.shift();
-        if(numnull > 1){
-            let j = 0;
-            while (j< numnull){
-                newArr.splice(1, 0, 0);
-                j++;
-            }
-        };
-        let num = newArr.join('');
+        let a = newArr.slice(numnull);
+        let b = [a.shift()];
+
+        let result = [...b,...c,...a];
+        let num = result.join('');
         return -(+num);
     }else{
         let arr = String(n).split('');
         let newArr = arr.sort((a, b) => a - b);
-        if(newArr[0] == 0){
-            [newArr[0], newArr[1]] = [newArr[1], newArr[0]];
+        let numnull = 0;
+        let c = [];
+        for(let i = 0; i<arr.length; i++){
+            if(arr[i] == 0){
+                numnull += 1;
+                c.push('0')
+            }
         }
-        let num = newArr.join('');
+        let a = newArr.slice(numnull);
+        let b = [a.shift()];
+
+        let result = [...b,...c,...a];
+        let num = result.join('');
         return +num
     }
 }
-
 
