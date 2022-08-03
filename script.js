@@ -1,4 +1,4 @@
-alert('Goog morning');
+alert('Goog j0b');
 
 
 function minPermutation(n) {
@@ -37,12 +37,3 @@ function minPermutation(n) {
 }
 
 
-
-    function bonusTime(salary, bonus) {
-    if(bonus==true){
-      return "£"+salary*10
-    }else{
-      return "£"+salary
-    }
-    }
-    const bonusTime = (salary, bonus) => bonus==true? "£"+salary*10 :"£"+salary;
